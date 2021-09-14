@@ -1,0 +1,15 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-3" *ngFor="let ad of advertisements">
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" [src]="ad.imageUrl" alt="Card image cap" class="img-thumbnail">
+                <div class="card-body">
+                    <button class="btn btn-primary" (click)="routeToDetails(ad.id)">Details</button>
+                    <button class="btn btn-warning" (click)="editAdvertisement(ad.id)">Edit</button>
+                    <button class="btn btn-danger" (click)="deleteAdvertisement(ad.id)">Delete</button>
+                </div>
+            </div>    
+            <br>        
+        </div>        
+    </div>
+</div>
